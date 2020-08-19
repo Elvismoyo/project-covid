@@ -1,0 +1,293 @@
+
+body{
+    height: 1rem;
+    background: transparent;
+    
+}
+
+input::placeholder {
+    color: grey;
+    font-size: 30px;
+    font-style: italic;
+    
+  
+  }
+  input[type="text"] {
+    font-family: Verdana, sans-serif;
+    font-size: 30px;
+    text-indent: 10px;
+    width: 400px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 4px solid royalblue;
+    outline-width: 0px;
+    
+    
+  }
+.input-container{
+    position: absolute;
+    top: 10px;
+    width: 400px;
+    height: 60px;
+    outline-width: 0px;
+    
+}
+@media screen and (max-width:500px){
+    input::placeholder {
+    font-size: 20px;
+  
+      }
+    .input-container{
+        
+        width: 10px;
+        left: 10px;
+       
+    }
+    #map{
+        
+        height: 812px !important;
+        
+    }
+    
+    input[type="text"]{
+        width: 280px;
+        margin-left: 40px;
+        font-size: 20px;
+    }
+    #showTableBtn{
+        top: 65px;
+        left: 40px;
+    }
+    #showGraphBtn{
+    margin-top: 50px;
+    left: 200px;
+    }
+    #chart-data{
+    height: 30vh !important;
+    width: 125vw !important;
+    
+    top: 230px !important;
+    
+    transform: rotate(90deg);
+    background: white;
+    
+    }    
+    
+    
+    #country-data-container{
+        
+        width: 320px !important;
+        height: 400px !important;
+        top: 140px;
+    
+        font-size: 10px !important;
+        border: 2px solid red;
+    }
+}
+
+#showTableBtn{
+    border: 4px solid black;
+    position: absolute;
+    bottom: 5px;
+    height: 40px;
+    right: -400px;
+    color: ivory;
+    width: 140px;
+    background-color:#26bde2;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    outline-width: 0px;
+}
+#showGraphBtn{
+    border: 4px solid white;
+    position: relative;
+    bottom: 45px;
+    height: 40px;
+    right: -450px;
+    width: 150px;
+    color: ivory;
+    background-color:#26bde2;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    outline-width: 0px;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+    outline-width: 0px;
+}
+#btn-country,#btn-cases,#btn-recovered,#btn-deaths{
+    border-radius: 10px;
+    outline-width: 0px;
+    color: white;
+    font-weight: 500;
+}
+
+button{
+  
+    outline-width: 0px;
+}
+.indv-countries{
+    
+    
+    background-color: lightsalmon;
+    font-size: 40px;
+    height: 20px;
+    border-radius: 10px;
+    outline-width: 0px;
+
+
+}
+
+.table-input{
+    width: 390px;
+    background-color: lightsalmon;
+
+    border-radius: 10px;
+    outline-width: 0px;  
+    height: 300px;
+    
+}
+
+.btns-input{
+border-radius: 10px;
+outline-width: 0px;
+margin-top: 20px;
+
+}
+.listOfCountries-container{
+    margin-top: 30px;
+    top: 70px;
+ 
+    height: 0px;
+    
+    width: 400px;
+    
+    position: absolute;
+    overflow: auto;
+    display: flex;
+    text-align: center;
+    
+    border-radius: 10px;
+    scroll-padding-top: 10px;
+
+}
+
+
+#chart-data{
+   
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    
+    visibility: hidden;
+    
+    background: white;
+}
+
+.map-info {
+    
+    width: 100%;
+    margin-top: 100px;
+    background-color: yellow;
+    height: 441px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+  
+#map  {
+    
+    width: 100%;
+    height: 150%;
+    position: relative;
+    bottom: 100px;
+    
+    
+}
+.info-flag img {
+    height: 100px;
+    width: 100px;
+    border-bottom: 15px;
+
+}
+.info-flag {
+    height: 170px;
+    width: 100%;
+    background-size: cover;
+    border: 4px solid black;
+    border-radius: 10px;
+    
+    
+}
+.info-name {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.info-container {
+    width: 300px;
+    height: 350px;
+    
+}
+
+.title-1{
+color: darkorange;
+}
+.title-2{
+color: limegreen;
+}
+.title-3{
+color: red;
+}
+.info-numbers{
+    font-size: 30px;
+    margin-top: 5px;
+    width: 200px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: bold;
+    color: royalblue;
+    
+   
+}
+.info-titles{
+    font-size: 30px;
+    width: 100px;
+    margin-top: 5px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    font-weight: bold;
+}
+.infor-data-container{
+
+    width: 300px;
+    
+}
+#country-data-container {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    margin-top: 20px;
+    
+    border-radius: 10px;
+    overflow-y: scroll;
+    font-size: 20px;
+    border:2px solid white ;
+   
+    
+    bottom: 70px;
+    visibility: hidden;
+    
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <title>COVID Tracker</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src = "map-style.js">   </script>  
+    <script src = "script.js">   </script>  
+</head>
+
+
+<body>
+    
+  
+    <div class="map-info">
+      
+        <div id="map"> 
+          
+        </div>
+       
+        <div class="input-container">
+          <input type="text" id="ctryName"
+          placeholder="Search a country"
+          oninput="searchCountry()"
+          >   
+          <button  id="showGraphBtn" onclick="closeGraph()">Show Graph</button>
+          <button  id="showTableBtn" onclick="closeTable()">Show Table</button>
+                   
+                  </div>   
+                    <div class="listOfCountries-container" id="listOfCountries-container_id">
+                      <table class="table-input table-dark table-striped">
+                      
+                      
+                        <tbody id = 'input-table-data'>
+                          <tr>
+                            
+                            <td ></td>
+                          
+                          </tr>
+                        </tbody>
+                        
+                      </tbody>
+                    </table>
+                    </div>
+                  
+    
+    
+      <div id="country-data-container">
+      <table class="table table-dark table-striped">
+        <div class="btns-container">
+        <thead>
+          <tr>
+            
+            <th><button class="btn-primary" id="btn-country" onclick=" callSortyByName()">Countries </button></th>
+            <th><button class="btn-warning" id="btn-cases" onclick="callSortyByCases()">Active Cases </button></th>
+            <th><button class="btn-success" id="btn-recovered" onclick="callSortyByRecovered()">Today Recovered </button></th>
+            <th><button class="btn-danger" id="btn-deaths" onclick="callSortyByDeaths()">Today Deaths </button></th>
+          
+          </tr>
+        </thead>
+      </div>
+        <tbody id = 'table-data'>
+          <tr>
+            <td>welp</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+            <td>ALV</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  
+    <div id="chart-data" style="position: absolute; height:80vh; width:80vw">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+     
+    
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClZOC4lNHhtPW8A0bslXWByQ8O6SPU0E0&callback=initMap"
+      async defer></script>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
